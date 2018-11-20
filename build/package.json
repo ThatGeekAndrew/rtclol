@@ -5,11 +5,11 @@
     "npm": ">=3.3 <4"
   },
   "dependencies": {
-    "babel-core": "5.8.34",
+    "babel-core": "6.10.4",
     "bluebird": "3.1.1",
     "classnames": "2.2.1",
     "eventemitter3": "1.1.1",
-    "express": "4.13.3",
+    "express": "4.16.0",
     "fastclick": "1.0.6",
     "fbjs": "0.5.1",
     "flux": "2.1.1",
@@ -22,7 +22,8 @@
     "react-dom": "0.14.3",
     "react-routing": "0.0.6",
     "source-map-support": "0.4.0",
-    "whatwg-fetch": "0.10.1"
+    "whatwg-fetch": "0.10.1",
+    "snyk": "^1.110.0"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.2.0",
@@ -80,6 +81,9 @@
     "bundle": "babel-node tools/run bundle",
     "build": "babel-node tools/run build",
     "deploy": "babel-node tools/run deploy",
-    "start": "node server.js"
-  }
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
